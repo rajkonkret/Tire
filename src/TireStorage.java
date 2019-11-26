@@ -15,7 +15,12 @@ class TireStorage {
     }
 
     void setaddTire(Tire tire, int x, int y, int z) {
-        storage[x][y][z] = tire;
+
+        if (storage[x][y][z] == null) {
+            storage[x][y][z] = tire;
+        } else {
+            System.out.println("Na tej półce jest już opona");
+        }
     }
 
     Tire getTire(int x, int y, int z) {

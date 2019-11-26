@@ -12,11 +12,11 @@ public class Run {
         System.out.println(tire.getTire());
 
         storage.setaddTire(tire, 1, 1, 1);
-        storage.setaddTire(tire2, 1, 2, 1);
-        storage.setaddTire(tire, 1, 3, 1);
+        storage.setaddTire(tire2, 1, 1, 1);
+        storage.setaddTire(tire, 1, 2, 1);
         storage.setaddTire(tire, 1, 4, 1);
 
-        tire = storage.getTire(1, 2, 1);
+        tire = storage.getTire(1, 1, 1);
         System.out.println(tire.getTire());
     }
 }
