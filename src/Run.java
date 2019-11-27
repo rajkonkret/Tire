@@ -8,16 +8,17 @@ public class Run {
         TireStorage storage = new TireStorage();
         Tire tire = new Tire(175, 70, 15);
         Tire tire2 = new Tire(185, 70, 15);
+        Tire tire3 = new Tire(195, 65, 15);
 
         System.out.println(tire.getTire());
 
         storage.setaddTire(tire, 1, 1, 1);
         storage.setaddTire(tire2, 1, 3, 1);
-        storage.setaddTire(tire, 1, 2, 1);
+        storage.setaddTire(tire3, 1, 2, 1);
         storage.setaddTire(tire, 1, 4, 1);
         for (int i = 0; i < 9; i++) {
             tire = storage.getTire(1, i, 1);
-            if (tire != null && tire.getTire().equalsIgnoreCase("[185/70 R15]")) {
+            if (tire != null) {
                 System.out.println("1 " + i + " 1 " + tire.getTire());
             }
         }
